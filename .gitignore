@@ -30,3 +30,9 @@ proguard/
 
 # Android Studio captures folder
 captures/
+
+# файлы студии
+.idea/
+
+# файл konqueror
+.directory
