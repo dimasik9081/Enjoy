@@ -24,6 +24,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import ru.enjoy.server.data.Category;
 import ru.enjoy.server.data.MainCategory;
+import ru.enjoy.server.data.MenuItem;
 import ru.enjoy.server.data.Root;
 
 /**
@@ -48,8 +49,8 @@ public class DataLoader {
             Root root = gson.fromJson(new InputStreamReader(new GZIPInputStream(is)), Root.class);
             Log.d("enjoytest", String.format("Память после : %d", Debug.getNativeHeapFreeSize()));
             Log.d("enjoytest", String.format("menuItems.length %d",root.menuItems.length) );
-            for(Category cat : root.categories) {
-                Log.d("enjoytest", String.format("Категория : %-30s id : %d", cat.name, cat.id));
+            for(MenuItem item : root.menuItems) {
+                Log.d("enjoytest", String.format("Пункт меню : %-30s %d", item.name, item.categoryId));
             }
             Log.d("enjoytest", "-------------------------------------------------");
             for(MainCategory cat : root.mainCategories){

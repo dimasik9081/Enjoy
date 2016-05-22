@@ -4,7 +4,8 @@ public class MenuItem {
 	public int id;
 	public int level;
 	public String name;
-	public String url;
+	transient public String url;
 	public int levelFirst;
 	public int position;
+	public int categoryId;
 }

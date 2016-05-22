@@ -1,9 +1,10 @@
 package ru.enjoy.server.data;
 
+import java.util.List;
+
 public class Category {
 	public int id;
 	public int type;
 	public String name;
-	public String url;
-	public ProductAndCategoryPointer[] products;
+	public List<ProductAndCategoryPointer> products;
 }
