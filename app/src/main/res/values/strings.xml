@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">EnjoyFlowers</string>
-    <string name="wait_load">Подождите идет загрузка</string>
+    <string name="wait_load">Подождите идет загрузка...</string>
 </resources>

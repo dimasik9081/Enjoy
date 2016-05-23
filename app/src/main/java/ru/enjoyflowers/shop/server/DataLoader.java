@@ -14,15 +14,6 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.zip.GZIPInputStream;
 
-import okhttp3.Interceptor;
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import ru.enjoy.server.data.Category;
 import ru.enjoy.server.data.MainCategory;
 import ru.enjoy.server.data.MenuItem;
 import ru.enjoy.server.data.Root;
@@ -56,8 +47,10 @@ public class DataLoader {
             for(MainCategory cat : root.mainCategories){
                 Log.d("enjoytest", String.format("Main category %s",cat.categoryId) );
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }

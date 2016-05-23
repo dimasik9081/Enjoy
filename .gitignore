@@ -36,3 +36,5 @@ captures/
 
 # файл konqueror
 .directory
+
+gradle*
