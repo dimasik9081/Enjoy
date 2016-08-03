@@ -1,6 +1,8 @@
 package ru.enjoy.server.data;
 
 public class Root {
+
+
 	public Product[] products;
 	public Category[] categories;
 	public ProductParameter[] productParams;

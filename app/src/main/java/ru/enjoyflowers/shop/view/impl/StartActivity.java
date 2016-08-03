@@ -1,14 +1,14 @@
-package ru.enjoyflowers.shop.control;
+package ru.enjoyflowers.shop.view.impl;
 
+import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import ru.enjoyflowers.shop.R;
 import ru.enjoyflowers.shop.server.DataLoader;
 
-public class StartActivity extends AppCompatActivity {
+public class StartActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,8 @@ public class StartActivity extends AppCompatActivity {
         final Handler h = new Handler(){
             @Override
             public void handleMessage(Message msg) {
-                startActivity.setContentView(R.layout.activity_menu);;
+                Intent intent = new Intent(startActivity, MainMenuActivity.class);
+                startActivity(intent);
             }
         };
 

@@ -22,14 +22,15 @@ import ru.enjoy.server.data.Root;
  * Created by dm on 21.05.16.
  */
 public class DataLoader {
-    private Root root;
     public void load(){
         Gson gson = new GsonBuilder().create();
         URL url;
         InputStream is;
         try {
             url = new URL("https://raw.githubusercontent.com/dmbel/Enjoy/master/app/src/test/json.gz");
-        } catch (MalformedURLException e) {return;}
+        } catch (MalformedURLException e) {
+            return;
+        }
         try {
             is = url.openStream();
         } catch (IOException e) {
@@ -47,10 +48,10 @@ public class DataLoader {
             for(MainCategory cat : root.mainCategories){
                 Log.d("enjoytest", String.format("Main category %s",cat.categoryId) );
             }
-
+            return;
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return;
     }
-
 }
